@@ -1,0 +1,11 @@
+<div class="container-flex">
+  <div class="row">
+    <div class="col-xs-offset-3 col-xs-6 center">
+      <h3>Ze is grateful for ...</h3>
+      <p>{{$ctrl.list.created_at | date: 'MMMM d, yyyy'}}</p>
+      <ol>
+        <li ng-repeat="item in $ctrl.list.items" ng-bind-html="item.as_displayable"></li>
+      </ol>
+    </div>
+  </div>
+</div>
