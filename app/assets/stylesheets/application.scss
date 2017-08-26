@@ -1,0 +1,85 @@
+// Imports all required styling files
+
+// Bootstrap.
+// For a list of Bootstrap variables for use/modification, see
+// https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss.
+@import "bootstrap-sprockets";
+@import "bootstrap-custom";
+@import "rails_bootstrap_forms";
+@import "variables";
+
+.center {
+  text-align: center;
+}
+
+.container-flex {        
+  display: flex;       
+  align-items: center;
+  justify-content:center; 
+  height: 100vh;
+  width: 100%;       
+}
+
+.home, .add, .lists {
+  background-image: url(polka-dots.svg);
+  background-size: 60px 30px;
+  background-repeat: repeat;
+}
+
+.custom-nav {
+  display: flex;
+  align-items: center;
+  background-color: $main-blue;
+  color: $text-color; 
+  .brand a {
+    font-family: $brand-font;
+    color: $text-color2;
+    font-size: 22px;
+  }
+}
+
+.birds-icon {
+  display: block;
+  text-indent: -9999px;
+  width: 80px;
+  height: 50px;
+  background: url(birds.svg);
+  background-size: 80px 50px;
+}
+.nest-icon {
+  display: block;
+  text-indent: -9999px;
+  width: 80px;
+  height: 50px;
+  background: url(nest.svg);
+  background-size: 80px 50px;
+}
+
+.option {
+  cursor: pointer;
+  background-color: $main-blue;
+  padding: 10px;
+}
+
+.opt-inner {
+  height: 50vh;
+  display: flex;       
+  align-items: center;
+  justify-content:center;
+  border: 2px solid white;
+  .action {
+    font-family: $brand-font;
+    color: $text-color2;
+    font-size: 35px;
+  }
+}
+
+
+.opt-1 {
+  margin-bottom: 15px;
+}
+
+.list-border {
+  border: solid 2px black;
+  margin: 20px;
+}

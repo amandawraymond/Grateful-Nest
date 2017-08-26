@@ -1,49 +1,17 @@
 <!DOCTYPE html>
-<html ng-app="App">
-<head>
-  <% if is_default_locale? %>
-    <base href="/">
-  <% else %>
-    <base href="/<%= I18n.locale %>/">
-  <% end %>
-
-  <title>Rails App Starter Kit</title>
-
-  <%= stylesheet_link_tag 'client/application', media: 'all' %>
-  <%= stylesheet_link_tag '/fine_uploader/fine-uploader.css' %>
-
-  <%= javascript_include_tag 'client/application' %>
-  <%= javascript_include_tag '/fine_uploader/s3.jquery.fine-uploader.min.js' %>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= csrf_meta_tags %>
-</head>
-<body ng-controller="AppCtrl">
-  <%= render 'layouts/top_nav' %>
-
-  <please-wait></please-wait>
-
-  <div class="container" id="flash-container">
-    <flash-alerts></flash-alerts>
-  </div>
-
-  <%= yield %>
-
-  <%= render 'layouts/footer' %>
-
-  <attachment-library uploader-options="uploaderOptions"></attachment-library>
-
-  <%= render 'layouts/fine_uploader_tmpl' %>
-
-  <%= render 'layouts/shared/global_js_vars' %>
-
-  <script type="application/javascript">
-    Static.available_locales = <%= raw available_locales_json(I18nUtils.avail_locales) %>;
-  </script>
-
-  <% if Rails.application.secrets.jw_player_account_token %>
-    <script src="//jwpsrv.com/library/<%= Rails.application.secrets.jw_player_account_token %>.js">
-    </script>
-  <% end %>
-</body>
+<html>
+  <head>
+    <title>Grateful Nest</title>
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+  </head>
+  <body ng-app="gratefulNest">
+    <%= render 'layouts/top_nav' %>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
+  </body>
 </html>

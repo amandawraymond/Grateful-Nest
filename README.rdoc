@@ -1,42 +1,31 @@
 = README
 
-      _ \    \     __|  |  /
-        /   _ \  \__ \  . <
-     _|_\ _/  _\ ____/ _|\_\
+Welcome to the Grateful Nest!
 
+trello: https://trello.com/b/BQB7vX1R
+moqup: https://gratefullnest.mybalsamiq.com/projects/gratefulnest/grid
 
-Welcome to the Rails App Starter Kit!
+Inspiration for this app is a "thankful journal" where you write down 10 things you are thankful for everyday before you go to bed. I would like to provide a "community thankful journal" where you can add your own and look through what others are thankful for. I would like to start this out as an anonymous posting for now, and later on add authentication/authorization, as well as, ability to save your own thankful notes and journal entries privately. I would like to allow for markdown in this on-line journal. I also would like to make sure that it is mobile-responsive.
 
-This is a starter project for creating applications using the Postgres, Rails
-and Angular stack, *on* *steroids*.
+Inspirations:
+iA writer
+Thankful Journals bought in WorldMarket
+Markdown preview/creator sites
+Post secret
 
-It has the following, and *much* *more*, built in:
-* Comprehensive Angular integration
-* A number of useful dev tools, DSLs and libraries for productive development
-* Authentication and authorization
-* User upload management and attachment
-* Full featured admin console for app admins
-* *Multi-tenancy!* (check out the multi-tenant branch)
-* Ready to deploy to Heroku
+Technologies: 
+Ruby on Rails (4.2.2)
+AngularJS (1.5.6)* with emphasis on components
+UI Router (1.0.0)*
+redcarpet gem for translate markdown to html
+bypass gem to search text for urls
+Sass
+Bootstrap 
 
-For a full, list of features, see
-here[https://github.com/svkanoria/rails-app-starter-kit/wiki#complete-wiring-and-feature-list].
+* These two together were new for me, I wanted to try them out and test-drive a bit
 
-== Demo
-
-http://rails-app-starter-kit.herokuapp.com
-
-Please treat any data (posts, users etc.) as transient, since these may be
-cleaned up from time to time.
-
-The app's admin console can be accessed at:
-
-http://rails-app-starter-kit.herokuapp.com/admin
-
-To access the admin console, sign in with the following credentials:
-* Email: admin@rails-app-starter-kit.com
-* Password: admin123
-
-== Everything Else
-
-See the wiki[https://github.com/svkanoria/rails-app-starter-kit/wiki].
+Future improvements:
+- authentication
+- authorization
+- allow users to decorate their posts through background, images, colors
+- pull in thankful quotes from an API

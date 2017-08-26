@@ -52,3 +52,9 @@
 // Utility classes
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
+
+// need to clean up plug-ins once done to remove unused ones
+
+.row {
+    flex: 1;
+}
