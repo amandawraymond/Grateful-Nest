@@ -1,40 +1,18 @@
-<%# The top (main) menu bar %>
-<nav class="navbar navbar-default" id="top-nav" role="navigation">
-  <div class="container-fluid">
-    <%# Brand and toggle get grouped for better mobile display %>
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed"
-              data-toggle="collapse" data-target="#top-nav-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" l-href="/:locale" translate="app_name"></a>
-    </div>
-
-    <%# Collect the nav links, forms and other content for toggling %>
-    <div class="collapse navbar-collapse" id="top-nav-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="posts" translate="Posts"></a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <locale-switcher></locale-switcher>
-        </li>
-
-        <authentication-links>
-          <li ng-if="authSvc.hasRole('admin')" ng-cloak>
-            <%# Note the "_self" target. This is needed to force Angular to
-              # reload the page when running in HTML5 mode. Otherwise, it just
-              # causes a history change within the client app, instead of doing
-              # a round-trip from the server.
-              #%>
-            <a l-href="/admin/:locale" target="_self"
-               translate="Admin Panel"></a>
-          </li>
-        </authentication-links>
-      </ul>
+<div class="navbar navbar custom-nav">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div class="brand">
+      <a class="navbar-brand" href="#">Grateful Nest</a>
     </div>
   </div>
-</nav>
+  <div class="navbar-collapse collapse navbar-inverse-collapse">
+    <ul class="nav navbar-nav">
+      <li><a ui-sref-active="active" ui-sref="lists"><i class="birds-icon"></i></a></li>
+      <li><a ui-sref-active="active" ui-sref="add"><i class="nest-icon"></i></a></li>
+    </ul>
+  </div>
+</div>
