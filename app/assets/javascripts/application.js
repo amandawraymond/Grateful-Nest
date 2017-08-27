@@ -33,6 +33,7 @@
 //= require jquery-ui/ui/draggable
 //= require jquery-ui/ui/droppable
 //
+//
 // See comments in assets/javascripts/bootstrap-custom.js
 //= require bootstrap-custom
 //
@@ -43,6 +44,7 @@
 //= require angular-animate/angular-animate
 //= require angular-sanitize/angular-sanitize
 //= require angular-rails-templates
+//= require ng-rails-csrf
 //= require underscore/underscore
 //= require underscore.string/dist/underscore.string
 //= require moment/moment
