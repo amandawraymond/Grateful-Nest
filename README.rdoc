@@ -18,24 +18,24 @@ moqup: https://gratefullnest.mybalsamiq.com/projects/gratefulnest/grid
 Inspiration for this app is a "thankful journal" where you write down 10 things you are thankful for everyday before you go to bed. I would like to provide a "community thankful journal" where you can add your own and look through what others are thankful for. I would like to start this out as an anonymous posting for now, and later on add authentication/authorization, as well as, ability to save your own thankful notes and journal entries privately. I would like to allow for markdown in this on-line journal. I also would like to make sure that it is mobile-responsive.
 
 Inspirations:
-iA writer
-Thankful Journals bought in WorldMarket
-Markdown preview/creator sites
-Post secret
+- iA writer
+- Thankful Journals bought in WorldMarket
+- Markdown preview/creator sites
+- Post secret
 
 Technologies: 
-Ruby on Rails (4.2.2)
-AngularJS (1.5.6)* with emphasis on components
-UI Router (1.0.0)*
-redcarpet gem for translate markdown to html
-bypass gem to search text for urls
-Sass
-Bootstrap 
+- Ruby on Rails (4.2.2)
+- AngularJS (1.5.6)* with emphasis on components - newer for me
+- UI Router (1.0.0) -  new for me 
+- redcarpet gem for translate markdown to html
+- bypass gem to search text for urls
+- Sass
+- Bootstrap 
+- Font Awesome 
 
-* These two together were new for me, I wanted to try them out and test-drive a bit
 
 Future improvements:
 - authentication
 - authorization
 - allow users to decorate their posts through background, images, colors
-- pull in thankful quotes from an API
+- pull in thankful quotes from an API to jazz up cards
