@@ -10,6 +10,7 @@ trello: https://trello.com/b/BQB7vX1R
   on the docket: 
     1. make it so you can add more than one list_item to the thankful list
     2. make it so you can see the markdown after the list_item in saved inside textbox
+    3. make sure the markdown capabilities are fully functional and provide helper text
 
 
 moqup: https://gratefullnest.mybalsamiq.com/projects/gratefulnest/grid
