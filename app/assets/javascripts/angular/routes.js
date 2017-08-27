@@ -3,7 +3,8 @@ var app = angular.module('gratefulNest', [
   'ui.router',
   'ngAnimate',
   'ngSanitize',
-  'ngResource'
+  'ngResource',
+  'ng-rails-csrf'
 ]);
 
 app.config(function($stateProvider, $urlServiceProvider) {
@@ -34,19 +35,12 @@ app.config(function($stateProvider, $urlServiceProvider) {
     .state('add', {
       url: '/add',
       component: 'addList',
+      resolve: {
+        list: function(ListService) {
+          return ListService.addList();
+        }
+      }
     })
-    // ALSO MAKE SURE THAT S-URI-f is lists.list(...params...)
-    // .state('lists.list', {
-    //   url: '/{listId}',
-    //   component: 'list',
-    //   resolve: {
-    //     list: function(lists, $stateParams) {
-    //       return lists.find(function(list) {
-    //         return list.id == $stateParams.listId;
-    //       });
-    //     }
-    //   }
-    // })
 
   $urlServiceProvider.rules.otherwise({ state: 'home' });
 })

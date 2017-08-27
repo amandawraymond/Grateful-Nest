@@ -1,7 +1,18 @@
-<div class="container-flex add">
-  <div class="row">
-    <div class="col-xs-offset-3 col-xs-6 center">
-      <div>I am grateful for ...</div>
+<div id="add" >
+  <h1 class="intro-ellipse">I am Grateful For ...</h1>
+    <div class="container-flex">
+      <div class="row">     
+        <div class="option center col-md-offset-3 col-md-6 col-xs-12">
+          <div class="add opt-inner">
+            <div class='textarea-wrapper'>
+              <input class="item-input" type="text" placeholder="I am grateful for ..." ng-model="$ctrl.list_item.original_text"/>
+            </div>
+            <button class="btn add-button" ng-click="$ctrl.saveItem()">Add To The Nest</button></div>     
+          </div>
+        </div>
+      </div>
     </div>
-  </div>  
 </div>
+
+
+

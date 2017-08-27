@@ -35,8 +35,6 @@ gem 'bootstrap-sass', '~> 3.3.0'
 # For Bootstrap compatible Rails form helpers
 gem 'bootstrap_form'
 
-gem 'font-awesome-rails', '~> 4.4'
-
 # For auto-prefixing Sass/CSS styles with vendor prefixes
 gem 'autoprefixer-rails'
 
