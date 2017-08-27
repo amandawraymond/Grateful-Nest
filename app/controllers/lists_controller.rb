@@ -3,13 +3,8 @@ class ListsController < ApplicationController
   
   def create
     @list = List.new    
-    success = @list.save
-    
-    if success
-      respond_with @list, status: :ok  
-    else
-      respond_with @list, status: :unprocessable_entity
-    end
+    @list.save!
+    respond_with @list
   end
 
   def show
@@ -18,18 +13,14 @@ class ListsController < ApplicationController
   end
 
   def index
-    @lists = List.with_items
+    @lists = List.with_items.recent_order
     respond_with @lists
   end
 
-  def destroy
-    @list = List.find(params[:id])
-    @list.destroy
-
-    if @list.deleted?
-      respond_with @list, status: :ok  
-    else
-      respond_with @list, status: :unprocessable_entity
-    end
+  def update
+    @list = List.find(params[:list_id])
+    @list.items.build(original_text: params[:original_text] )
+    @list.save!
+    respond_with @list
   end
 end

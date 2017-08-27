@@ -5,8 +5,16 @@ class List < ActiveRecord::Base
         joins(:items).uniq
     }
 
+    scope :recent_order, -> {
+        order('created_at asc')
+    }
+
     def items_count
         items.count
+    end
+
+    def has_items
+        items.count > 0
     end
 
     def self.json_opts(opts = {})

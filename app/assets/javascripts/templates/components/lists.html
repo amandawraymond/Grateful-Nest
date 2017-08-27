@@ -1,14 +1,15 @@
-<div class="container-flex lists">
-  <div class="row">
-    <div class="col-xs-offset-3 col-xs-6 center">
-      <div class="list-border" ng-repeat="list in $ctrl.lists"> 
-        <a ui-sref="list({ listId: list.id })">
-          <p>{{list.created_at | date: 'MMMM d, yyyy'}}</p>
-          <ol>
-            <li ng-repeat="item in list.items" ng-bind-html="item.as_displayable"></li>
-          </ol>
-        </a>
+<div id="lists">
+  <h1 class="intro-ellipse">We Are Grateful For ...</h1>
+  <div class="container-flex">
+    <div class="row list-cards">
+      <h1 class="no-lists" ng-if="!$ctrl.lists">
+        <a ui-sref="add">Be the first one to create a Grateful Nest!</a>
+      </h1>
+      <div class="list-card card" ng-repeat="list in $ctrl.lists"> 
+        <a class="go-to" ui-sref="list({ listId: list.id })"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+        <p class="date">{{list.created_at | date: 'MMM d, yyyy'}}</p>
+        <p ng-repeat="item in list.items" ng-bind-html="item.as_displayable"></p>
       </div>
-    </div>
-  </div>  
+    </div>  
+  </div>
 </div>
