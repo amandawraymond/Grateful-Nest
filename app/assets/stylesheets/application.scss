@@ -8,6 +8,7 @@
 @import "rails_bootstrap_forms";
 @import "variables";
 
+//////// shared styles ////////
 .center {
   text-align: center;
 }
@@ -16,21 +17,32 @@
   display: flex;       
   align-items: center;
   justify-content:center; 
-  height: 100vh;
   width: 100%;       
 }
 
-.home, .add, .lists {
+.intro-ellipse {
+  font-family: $brand-font;
+  color: $text-color1;
+  font-size: 3em;
+  text-align: center;
+  padding: 5vh;
+  @media(min-width: 40rem) {
+    font-size: 5em;
+  }
+}
+
+#home, #add, #lists, #list {
   background-image: url(polka-dots.svg);
   background-size: 60px 30px;
   background-repeat: repeat;
+  height: 100vh;
 }
 
 .custom-nav {
   display: flex;
   align-items: center;
   background-color: $main-blue;
-  color: $text-color; 
+  color: $text-color1; 
   .brand a {
     font-family: $brand-font;
     color: $text-color2;
@@ -55,9 +67,14 @@
   background-size: 80px 50px;
 }
 
+.external-link {
+  color: $external-link;
+}
+//////// home page and add page////////
 .option {
   cursor: pointer;
   background-color: $main-blue;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
   padding: 10px;
 }
 
@@ -72,14 +89,89 @@
     color: $text-color2;
     font-size: 35px;
   }
+  &.add {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 }
-
 
 .opt-1 {
   margin-bottom: 15px;
 }
 
-.list-border {
-  border: solid 2px black;
-  margin: 20px;
+.textarea-wrapper {
+  margin-bottom: 15px;
 }
+.add-button {
+  color: $text-color1;
+  background-color: $text-color2;
+}
+
+//////// list & lists page ////////
+.no-lists a{
+  color: $main-blue;
+  margin: 20px;
+  
+}
+.list-cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+}
+.list-card {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  margin: 10px;
+  a.go-to {
+    text-align: right;
+    font-size: 24px;
+    color: $text-color2;
+    opacity: 0.6;
+  }
+  min-width: 95%;
+  @media(min-width: 40rem) {
+    min-width: 50%;
+  }
+  @media(min-width: 56rem) {
+    min-width: 30%;
+  }
+}
+
+.card {
+  background-color: $main-blue;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  overflow: hidden;
+  text-align: left;
+  &:hover {
+    text-decoration: none;
+  }
+  .date {
+    color: $text-color2;
+    opacity: 0.6;
+    font-family: $brand-font;
+    font-size: 22px;
+    margin-bottom:15px;
+  }
+  p {
+    text-align: center;
+    font-size: 18px; 
+    color: $text-color2;
+  }
+}
+
+.solo-card {
+  min-height: 50vh;
+  a.go-back {
+    color: $text-color2;
+    opacity: 0.6;
+    text-align: left;
+    font-size: 30px;
+  }
+}
+
+
