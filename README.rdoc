@@ -2,7 +2,16 @@
 
 Welcome to the Grateful Nest!
 
+This is a work in progress. I wanted to try out angularJS 1.5.6 components with UI Router.
+Look at trello card to see what my next features are.
+
 trello: https://trello.com/b/BQB7vX1R
+
+  on the docket: 
+    1. make it so you can add more than one list_item to the thankful list
+    2. make it so you can see the markdown after the list_item in saved inside textbox
+
+
 moqup: https://gratefullnest.mybalsamiq.com/projects/gratefulnest/grid
 
 Inspiration for this app is a "thankful journal" where you write down 10 things you are thankful for everyday before you go to bed. I would like to provide a "community thankful journal" where you can add your own and look through what others are thankful for. I would like to start this out as an anonymous posting for now, and later on add authentication/authorization, as well as, ability to save your own thankful notes and journal entries privately. I would like to allow for markdown in this on-line journal. I also would like to make sure that it is mobile-responsive.
